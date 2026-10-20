@@ -1,0 +1,653 @@
+{
+  "cases": [
+    {
+      "delta": 12,
+      "exact": {
+        "energy": 50,
+        "feasible_candidates": 16,
+        "fulfilled": 7,
+        "gap": 0,
+        "pruned_nodes": 63,
+        "reserved": 104,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "E1",
+          "F2",
+          "G1",
+          "H1"
+        ],
+        "status": "OPTIMAL",
+        "units": 60,
+        "upper_bound": 60,
+        "utility": 60,
+        "violations": [],
+        "visited_nodes": 143
+      },
+      "greedy": {
+        "energy": 42,
+        "fulfilled": 5,
+        "reserved": 84,
+        "selected": [
+          "A2",
+          "E2",
+          "F1",
+          "G2",
+          "H1"
+        ],
+        "units": 48,
+        "utility": 48,
+        "violations": []
+      },
+      "id": "5207b72679ae4baff5a335ef9ae6222e9de3b912ef84020623199ad2062639e3",
+      "policy": 0,
+      "scenario": "nominal"
+    },
+    {
+      "delta": 0,
+      "exact": {
+        "energy": 50,
+        "feasible_candidates": 16,
+        "fulfilled": 7,
+        "gap": 0,
+        "pruned_nodes": 29,
+        "reserved": 104,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "E1",
+          "F2",
+          "G1",
+          "H1"
+        ],
+        "status": "OPTIMAL",
+        "units": 60,
+        "upper_bound": 456,
+        "utility": 456,
+        "violations": [],
+        "visited_nodes": 66
+      },
+      "greedy": {
+        "energy": 50,
+        "fulfilled": 7,
+        "reserved": 104,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "E1",
+          "F2",
+          "G1",
+          "H1"
+        ],
+        "units": 60,
+        "utility": 456,
+        "violations": []
+      },
+      "id": "918740691657fc8b876d2a3fc3aba063a008088b8ab01d31a7442de0a17fe76f",
+      "policy": 1,
+      "scenario": "nominal"
+    },
+    {
+      "delta": 4,
+      "exact": {
+        "energy": 32,
+        "feasible_candidates": 11,
+        "fulfilled": 5,
+        "gap": 0,
+        "pruned_nodes": 50,
+        "reserved": 68,
+        "selected": [
+          "B1",
+          "C1",
+          "E1",
+          "G2",
+          "H1"
+        ],
+        "status": "OPTIMAL",
+        "units": 42,
+        "upper_bound": 42,
+        "utility": 42,
+        "violations": [],
+        "visited_nodes": 143
+      },
+      "greedy": {
+        "energy": 31,
+        "fulfilled": 4,
+        "reserved": 62,
+        "selected": [
+          "D1",
+          "E2",
+          "G2",
+          "H1"
+        ],
+        "units": 38,
+        "utility": 38,
+        "violations": []
+      },
+      "id": "efd2120e685cc92da3083216226bc984a17fccc2380105e7ea9e2368bb0deff6",
+      "policy": 0,
+      "scenario": "station-outage"
+    },
+    {
+      "delta": 68,
+      "exact": {
+        "energy": 33,
+        "feasible_candidates": 11,
+        "fulfilled": 5,
+        "gap": 0,
+        "pruned_nodes": 30,
+        "reserved": 68,
+        "selected": [
+          "B1",
+          "C1",
+          "D1",
+          "E1",
+          "G2"
+        ],
+        "status": "OPTIMAL",
+        "units": 42,
+        "upper_bound": 332,
+        "utility": 332,
+        "violations": [],
+        "visited_nodes": 82
+      },
+      "greedy": {
+        "energy": 34,
+        "fulfilled": 4,
+        "reserved": 68,
+        "selected": [
+          "A1",
+          "D2",
+          "E1",
+          "H1"
+        ],
+        "units": 38,
+        "utility": 264,
+        "violations": []
+      },
+      "id": "8c28c8d3b0b841726999bd51ee264b5cf7084571a73fa6d90bb62a50d10d4cd4",
+      "policy": 1,
+      "scenario": "station-outage"
+    },
+    {
+      "delta": 10,
+      "exact": {
+        "energy": 47,
+        "feasible_candidates": 11,
+        "fulfilled": 7,
+        "gap": 0,
+        "pruned_nodes": 18,
+        "reserved": 96,
+        "selected": [
+          "B2",
+          "C2",
+          "D1",
+          "E2",
+          "F1",
+          "G2",
+          "H1"
+        ],
+        "status": "OPTIMAL",
+        "units": 58,
+        "upper_bound": 58,
+        "utility": 58,
+        "violations": [],
+        "visited_nodes": 44
+      },
+      "greedy": {
+        "energy": 42,
+        "fulfilled": 5,
+        "reserved": 84,
+        "selected": [
+          "A2",
+          "E2",
+          "F1",
+          "G2",
+          "H1"
+        ],
+        "units": 48,
+        "utility": 48,
+        "violations": []
+      },
+      "id": "03377a20009feab3f69ce1387d22c7ddc1bab7440241161c0410574d5ef66ced",
+      "policy": 0,
+      "scenario": "maintenance"
+    },
+    {
+      "delta": 68,
+      "exact": {
+        "energy": 47,
+        "feasible_candidates": 11,
+        "fulfilled": 7,
+        "gap": 0,
+        "pruned_nodes": 18,
+        "reserved": 96,
+        "selected": [
+          "B2",
+          "C2",
+          "D1",
+          "E2",
+          "F1",
+          "G2",
+          "H1"
+        ],
+        "status": "OPTIMAL",
+        "units": 58,
+        "upper_bound": 404,
+        "utility": 404,
+        "violations": [],
+        "visited_nodes": 44
+      },
+      "greedy": {
+        "energy": 42,
+        "fulfilled": 5,
+        "reserved": 84,
+        "selected": [
+          "A2",
+          "E2",
+          "F1",
+          "G2",
+          "H1"
+        ],
+        "units": 48,
+        "utility": 336,
+        "violations": []
+      },
+      "id": "421ffb4a1338b35223f4e45f61d550c76e1102d6045c1d8a1e372b6138f4ad01",
+      "policy": 1,
+      "scenario": "maintenance"
+    },
+    {
+      "delta": 6,
+      "exact": {
+        "energy": 35,
+        "feasible_candidates": 14,
+        "fulfilled": 5,
+        "gap": 0,
+        "pruned_nodes": 117,
+        "reserved": 76,
+        "selected": [
+          "A1",
+          "C2",
+          "F2",
+          "G1",
+          "H1"
+        ],
+        "status": "OPTIMAL",
+        "units": 42,
+        "upper_bound": 42,
+        "utility": 42,
+        "violations": [],
+        "visited_nodes": 333
+      },
+      "greedy": {
+        "energy": 30,
+        "fulfilled": 4,
+        "reserved": 66,
+        "selected": [
+          "A1",
+          "F1",
+          "G1",
+          "H1"
+        ],
+        "units": 36,
+        "utility": 36,
+        "violations": []
+      },
+      "id": "627e5d97b72477cdf17431e4865d6239b1ce5b8d331cb89b1b3c229ac6f83dff",
+      "policy": 0,
+      "scenario": "tight-energy"
+    },
+    {
+      "delta": 0,
+      "exact": {
+        "energy": 34,
+        "feasible_candidates": 14,
+        "fulfilled": 5,
+        "gap": 0,
+        "pruned_nodes": 71,
+        "reserved": 72,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "F2",
+          "G1"
+        ],
+        "status": "OPTIMAL",
+        "units": 40,
+        "upper_bound": 340,
+        "utility": 340,
+        "violations": [],
+        "visited_nodes": 190
+      },
+      "greedy": {
+        "energy": 34,
+        "fulfilled": 5,
+        "reserved": 72,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "F2",
+          "G1"
+        ],
+        "units": 40,
+        "utility": 340,
+        "violations": []
+      },
+      "id": "03b0e834aa8270e487ac47975a038e7b8e7fc3c69a9fc1e225f85c3a79513cd0",
+      "policy": 1,
+      "scenario": "tight-energy"
+    },
+    {
+      "delta": 12,
+      "exact": {
+        "energy": 52,
+        "feasible_candidates": 18,
+        "fulfilled": 7,
+        "gap": 0,
+        "pruned_nodes": 289,
+        "reserved": 104,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "E1",
+          "G1",
+          "H1",
+          "I2"
+        ],
+        "status": "OPTIMAL",
+        "units": 62,
+        "upper_bound": 62,
+        "utility": 62,
+        "violations": [],
+        "visited_nodes": 653
+      },
+      "greedy": {
+        "energy": 44,
+        "fulfilled": 5,
+        "reserved": 84,
+        "selected": [
+          "A2",
+          "E2",
+          "G2",
+          "H1",
+          "I1"
+        ],
+        "units": 50,
+        "utility": 50,
+        "violations": []
+      },
+      "id": "c7436fb1ce05af13c3dc39205ace454043c23e85dedf6b2b9af7a8ce5c82756d",
+      "policy": 0,
+      "scenario": "urgent-insertion"
+    },
+    {
+      "delta": 80,
+      "exact": {
+        "energy": 52,
+        "feasible_candidates": 18,
+        "fulfilled": 7,
+        "gap": 0,
+        "pruned_nodes": 80,
+        "reserved": 104,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "E1",
+          "G1",
+          "H1",
+          "I2"
+        ],
+        "status": "OPTIMAL",
+        "units": 62,
+        "upper_bound": 536,
+        "utility": 536,
+        "violations": [],
+        "visited_nodes": 190
+      },
+      "greedy": {
+        "energy": 48,
+        "fulfilled": 6,
+        "reserved": 98,
+        "selected": [
+          "A1",
+          "E1",
+          "F2",
+          "G1",
+          "H1",
+          "I1"
+        ],
+        "units": 58,
+        "utility": 456,
+        "violations": []
+      },
+      "id": "0e1f99c33faccf4e2a56f06ac1626e62e42a1d1a14e4298bc1c9b97eb076ab73",
+      "policy": 1,
+      "scenario": "urgent-insertion"
+    },
+    {
+      "delta": 12,
+      "exact": {
+        "energy": 44,
+        "feasible_candidates": 14,
+        "fulfilled": 6,
+        "gap": 0,
+        "pruned_nodes": 235,
+        "reserved": 90,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "E1",
+          "F2",
+          "G1"
+        ],
+        "status": "OPTIMAL",
+        "units": 52,
+        "upper_bound": 52,
+        "utility": 52,
+        "violations": [],
+        "visited_nodes": 539
+      },
+      "greedy": {
+        "energy": 36,
+        "fulfilled": 4,
+        "reserved": 70,
+        "selected": [
+          "A2",
+          "E2",
+          "F1",
+          "G2"
+        ],
+        "units": 40,
+        "utility": 40,
+        "violations": []
+      },
+      "id": "a5a7581122b0356e3ffb9f65a861e0b775b75e4fb093535b140377f6941acf8a",
+      "policy": 0,
+      "scenario": "impossible-deadline"
+    },
+    {
+      "delta": 0,
+      "exact": {
+        "energy": 44,
+        "feasible_candidates": 14,
+        "fulfilled": 6,
+        "gap": 0,
+        "pruned_nodes": 61,
+        "reserved": 90,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "E1",
+          "F2",
+          "G1"
+        ],
+        "status": "OPTIMAL",
+        "units": 52,
+        "upper_bound": 424,
+        "utility": 424,
+        "violations": [],
+        "visited_nodes": 142
+      },
+      "greedy": {
+        "energy": 44,
+        "fulfilled": 6,
+        "reserved": 90,
+        "selected": [
+          "A1",
+          "B2",
+          "C2",
+          "E1",
+          "F2",
+          "G1"
+        ],
+        "units": 52,
+        "utility": 424,
+        "violations": []
+      },
+      "id": "4a38b652fc4a17fd1cb0e885d554705f6e8b98673791cba5b11a48bb56c8c0e1",
+      "policy": 1,
+      "scenario": "impossible-deadline"
+    },
+    {
+      "delta": 2,
+      "exact": {
+        "energy": 8,
+        "feasible_candidates": 3,
+        "fulfilled": 2,
+        "gap": 0,
+        "pruned_nodes": 2,
+        "reserved": 20,
+        "selected": [
+          "B1",
+          "C1"
+        ],
+        "status": "OPTIMAL",
+        "units": 12,
+        "upper_bound": 12,
+        "utility": 12,
+        "violations": [],
+        "visited_nodes": 9
+      },
+      "greedy": {
+        "energy": 10,
+        "fulfilled": 1,
+        "reserved": 22,
+        "selected": [
+          "A1"
+        ],
+        "units": 10,
+        "utility": 10,
+        "violations": []
+      },
+      "id": "9906e58ef1b83bc816748bced9e5fef83727269f56b1797c0e6e67ff8bc6644b",
+      "policy": 0,
+      "scenario": "greedy-trap"
+    },
+    {
+      "delta": 20,
+      "exact": {
+        "energy": 8,
+        "feasible_candidates": 3,
+        "fulfilled": 2,
+        "gap": 0,
+        "pruned_nodes": 2,
+        "reserved": 20,
+        "selected": [
+          "B1",
+          "C1"
+        ],
+        "status": "OPTIMAL",
+        "units": 12,
+        "upper_bound": 120,
+        "utility": 120,
+        "violations": [],
+        "visited_nodes": 9
+      },
+      "greedy": {
+        "energy": 10,
+        "fulfilled": 1,
+        "reserved": 22,
+        "selected": [
+          "A1"
+        ],
+        "units": 10,
+        "utility": 100,
+        "violations": []
+      },
+      "id": "46f69efa72a656f258b19db0706839fc34ed2c9cc8937ec05e87195f738c5a23",
+      "policy": 1,
+      "scenario": "greedy-trap"
+    },
+    {
+      "delta": 0,
+      "exact": {
+        "energy": 0,
+        "feasible_candidates": 0,
+        "fulfilled": 0,
+        "gap": 0,
+        "pruned_nodes": 0,
+        "reserved": 0,
+        "selected": [],
+        "status": "OPTIMAL",
+        "units": 0,
+        "upper_bound": 0,
+        "utility": 0,
+        "violations": [],
+        "visited_nodes": 9
+      },
+      "greedy": {
+        "energy": 0,
+        "fulfilled": 0,
+        "reserved": 0,
+        "selected": [],
+        "units": 0,
+        "utility": 0,
+        "violations": []
+      },
+      "id": "8b5255ed529ab339ee31da4ffb775b5aac86b23074ac24819117382ab99ec604",
+      "policy": 0,
+      "scenario": "unreachable-window"
+    },
+    {
+      "delta": 0,
+      "exact": {
+        "energy": 0,
+        "feasible_candidates": 0,
+        "fulfilled": 0,
+        "gap": 0,
+        "pruned_nodes": 0,
+        "reserved": 0,
+        "selected": [],
+        "status": "OPTIMAL",
+        "units": 0,
+        "upper_bound": 0,
+        "utility": 0,
+        "violations": [],
+        "visited_nodes": 9
+      },
+      "greedy": {
+        "energy": 0,
+        "fulfilled": 0,
+        "reserved": 0,
+        "selected": [],
+        "units": 0,
+        "utility": 0,
+        "violations": []
+      },
+      "id": "f14f67f05a208d112da6405f20fbae17a9608f2aa088202589005fc6732e7993",
+      "policy": 1,
+      "scenario": "unreachable-window"
+    }
+  ],
+  "description": "Synthetic fixed-candidate planning contracts by Jason Stys; not flight performance"
+}

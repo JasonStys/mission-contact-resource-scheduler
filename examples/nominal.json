@@ -1,0 +1,234 @@
+{
+  "blackouts": [],
+  "energy_budgets": {
+    "SC-A": 24,
+    "SC-B": 24,
+    "SC-C": 24
+  },
+  "horizon": 120,
+  "options": [
+    {
+      "end": 30,
+      "energy": 10,
+      "id": "A1",
+      "rate": 1,
+      "request": "R01",
+      "start": 10,
+      "station": "ALPHA"
+    },
+    {
+      "end": 32,
+      "energy": 12,
+      "id": "A2",
+      "rate": 1,
+      "request": "R01",
+      "start": 12,
+      "station": "BRAVO"
+    },
+    {
+      "end": 18,
+      "energy": 4,
+      "id": "B1",
+      "rate": 1,
+      "request": "R02",
+      "start": 10,
+      "station": "ALPHA"
+    },
+    {
+      "end": 16,
+      "energy": 5,
+      "id": "B2",
+      "rate": 1,
+      "request": "R02",
+      "start": 8,
+      "station": "BRAVO"
+    },
+    {
+      "end": 30,
+      "energy": 4,
+      "id": "C1",
+      "rate": 1,
+      "request": "R03",
+      "start": 22,
+      "station": "ALPHA"
+    },
+    {
+      "end": 32,
+      "energy": 5,
+      "id": "C2",
+      "rate": 1,
+      "request": "R03",
+      "start": 24,
+      "station": "BRAVO"
+    },
+    {
+      "end": 52,
+      "energy": 7,
+      "id": "D1",
+      "rate": 1,
+      "request": "R04",
+      "start": 40,
+      "station": "CHARLIE"
+    },
+    {
+      "end": 50,
+      "energy": 8,
+      "id": "D2",
+      "rate": 1,
+      "request": "R04",
+      "start": 38,
+      "station": "ALPHA"
+    },
+    {
+      "end": 74,
+      "energy": 10,
+      "id": "E1",
+      "rate": 1,
+      "request": "R05",
+      "start": 58,
+      "station": "CHARLIE"
+    },
+    {
+      "end": 72,
+      "energy": 10,
+      "id": "E2",
+      "rate": 1,
+      "request": "R05",
+      "start": 56,
+      "station": "ALPHA"
+    },
+    {
+      "end": 74,
+      "energy": 6,
+      "id": "F1",
+      "rate": 1,
+      "request": "R06",
+      "start": 62,
+      "station": "BRAVO"
+    },
+    {
+      "end": 86,
+      "energy": 6,
+      "id": "F2",
+      "rate": 1,
+      "request": "R06",
+      "start": 74,
+      "station": "ALPHA"
+    },
+    {
+      "end": 104,
+      "energy": 8,
+      "id": "G1",
+      "rate": 1,
+      "request": "R07",
+      "start": 90,
+      "station": "BRAVO"
+    },
+    {
+      "end": 102,
+      "energy": 8,
+      "id": "G2",
+      "rate": 1,
+      "request": "R07",
+      "start": 88,
+      "station": "ALPHA"
+    },
+    {
+      "end": 106,
+      "energy": 6,
+      "id": "H1",
+      "rate": 1,
+      "request": "R08",
+      "start": 94,
+      "station": "CHARLIE"
+    },
+    {
+      "end": 112,
+      "energy": 6,
+      "id": "H2",
+      "rate": 1,
+      "request": "R08",
+      "start": 100,
+      "station": "ALPHA"
+    }
+  ],
+  "requests": [
+    {
+      "band": "X",
+      "deadline": 36,
+      "id": "R01",
+      "priority": 10,
+      "release": 0,
+      "spacecraft": "SC-A",
+      "units": 10
+    },
+    {
+      "band": "X",
+      "deadline": 24,
+      "id": "R02",
+      "priority": 10,
+      "release": 0,
+      "spacecraft": "SC-B",
+      "units": 6
+    },
+    {
+      "band": "X",
+      "deadline": 40,
+      "id": "R03",
+      "priority": 10,
+      "release": 18,
+      "spacecraft": "SC-C",
+      "units": 6
+    },
+    {
+      "band": "S",
+      "deadline": 70,
+      "id": "R04",
+      "priority": 6,
+      "release": 36,
+      "spacecraft": "SC-A",
+      "units": 8
+    },
+    {
+      "band": "S",
+      "deadline": 88,
+      "id": "R05",
+      "priority": 7,
+      "release": 42,
+      "spacecraft": "SC-B",
+      "units": 12
+    },
+    {
+      "band": "X",
+      "deadline": 92,
+      "id": "R06",
+      "priority": 5,
+      "release": 50,
+      "spacecraft": "SC-C",
+      "units": 8
+    },
+    {
+      "band": "X",
+      "deadline": 112,
+      "id": "R07",
+      "priority": 8,
+      "release": 76,
+      "spacecraft": "SC-A",
+      "units": 10
+    },
+    {
+      "band": "S",
+      "deadline": 118,
+      "id": "R08",
+      "priority": 4,
+      "release": 84,
+      "spacecraft": "SC-B",
+      "units": 8
+    }
+  ],
+  "station_budgets": {
+    "ALPHA": 36,
+    "BRAVO": 36,
+    "CHARLIE": 36
+  }
+}

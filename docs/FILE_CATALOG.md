@@ -1,0 +1,65 @@
+# File catalog
+
+Every tracked-intent file; dependencies/private outputs are excluded.
+
+- `.gitattributes` — Normalize source text to LF and preserve binary screenshot assets.
+- `.github/workflows/codeql.yml` — # Security analysis by Jason Stys. Jobs: Python and JavaScript/TypeScript CodeQL.
+- `.github/workflows/release.yml` — # Manual draft-release packaging by Jason Stys. Never publishes automatically.
+- `.github/workflows/validate.yml` — # Reproducible scheduler and portable app validation by Jason Stys.
+- `.gitignore` — Exclude dependencies, runtime/private data, histories and generated builds from Git.
+- `.prettierignore` — Exclude generated indexes, locks and build/dependency trees from formatting.
+- `.prettierrc.json` — Shared readable browser/configuration/Markdown formatting options.
+- `LICENSE` — MIT License
+- `README.md` — # Mission Contact Resource Scheduler
+- `SECURITY.md` — # Security and safe use
+- `docs/API.md` — # Input, HTTP and evidence contracts
+- `docs/ARCHITECTURE.md` — # Architecture decisions
+- `docs/MODEL.md` — # Model, objective and limits
+- `docs/RELEASE.md` — # Release and rollback procedure
+- `docs/THIRD_PARTY.md` — # Dependencies, notices and research
+- `docs/USER_GUIDE.md` — # User guide
+- `docs/VALIDATION.md` — # Validation evidence and strategy
+- `docs/images/overview.jpg` — Binary screenshot asset from local application validation
+- `docs/images/workspace.jpg` — Binary screenshot asset from local application validation
+- `docs/reports/benchmark.json` — Reviewed synthetic scheduler benchmark summaries and deterministic evidence hashes.
+- `docs/reports/ci-baseline.md` — # CI and release verification record
+- `examples/nominal.json` — Editable strict JSON case with invented requests, candidate contacts and resource budgets.
+- `launcher.py` — """Portable application entry point by Jason Stys; main and argv: docs/CODE_INDEX.md.
+- `licenses/PYTHON.txt` — A. HISTORY OF THE SOFTWARE
+- `package-lock.json` — Resolved npm dependency graph with download integrity values.
+- `package.json` — Pinned browser dependencies, Node version contract and build/test/audit scripts.
+- `playwright.config.ts` — /** Cross-engine website integration configuration by Jason Stys.
+- `pyproject.toml` — Python metadata, supported runtimes, strict lint/type/test and coverage gates.
+- `requirements-dev.in` — Scientific test, type, style, audit and packaging dependency inputs.
+- `requirements-dev.lock` — Universal pinned development/build graph with distribution hashes.
+- `requirements.in` — Standard-library-only Python runtime declaration (no third-party runtime packages).
+- `requirements.lock` — Empty runtime lock: this service uses only the CPython standard library.
+- `scheduler/__init__.py` — """Bounded synthetic contact-planning toolkit by Jason Stys.
+- `scheduler/__main__.py` — """Local website launcher and reproducible export CLI by Jason Stys.
+- `scheduler/engine.py` — """Reviewed synthetic scenarios and canonical experiment evidence by Jason Stys.
+- `scheduler/model.py` — """Strict finite planning inputs by Jason Stys.
+- `scheduler/reports.py` — """Deterministic inert exports and explicit local SQL history by Jason Stys.
+- `scheduler/resources/history.sql` — -- Immutable local experiment history by Jason Stys. Tables/triggers: docs/CODE_INDEX.md.
+- `scheduler/server.py` — """Loopback-only, read-only HTTP application by Jason Stys; not an Internet server.
+- `scheduler/solver.py` — """Deterministic greedy and exact branch-and-bound planning by Jason Stys.
+- `tests/test_io.py` — """CLI, report, SQLite and actual loopback HTTP integration tests by Jason Stys.
+- `tests/test_model.py` — """Strict input, canonical provenance and finite control tests by Jason Stys.
+- `tests/test_solver.py` — """Independent exhaustive oracle, grid and constraint tests by Jason Stys.
+- `tests/ui.spec.ts` — /** Production-handler, three-engine browser acceptance tests by Jason Stys.
+- `tools/benchmark.py` — """Portable deterministic scheduler contracts and descriptive timing by Jason Stys.
+- `tools/package_app.py` — """Build portable native bundles from reviewed source by Jason Stys.
+- `tools/prepare_release.py` — """Fail-closed draft release preparation by Jason Stys.
+- `tools/smoke_app.py` — """Actual frozen-executable export and loopback smoke test by Jason Stys.
+- `tools/upload_release.py` — """Upload only a freshly smoke-tested native bundle to its draft by Jason Stys.
+- `tools/verify_repo.py` — """Generate/check exact-line code and file inventories by Jason Stys.
+- `tsconfig.json` — Strict TypeScript contracts for browser, unit and end-user test code.
+- `vitest.config.ts` — /** Pure display-logic tests by Jason Stys; configuration inventory: docs/CODE_INDEX.md. */
+- `web/contracts.test.ts` — /** Pure finite-setting, escaping and SVG contract tests by Jason Stys.
+- `web/contracts.ts` — /** Browser evidence contracts and pure rendering helpers by Jason Stys.
+- `web/env.d.ts` — /** Vite static asset typing by Jason Stys; reference declarations: docs/CODE_INDEX.md. */
+- `web/index.html` — <!doctype html>
+- `web/main.ts` — /** Interactive local planning workspace by Jason Stys.
+- `web/style.css` — /* Mission planning workspace by Jason Stys. Selectors/variables: docs/CODE_INDEX.md.
+- `web/vite.config.ts` — /** Local production asset build by Jason Stys. Configuration variables: docs/CODE_INDEX.md. */
+- `docs/CODE_INDEX.md` — Generated exact-line source inventory.
+- `docs/FILE_CATALOG.md` — This generated complete file index.

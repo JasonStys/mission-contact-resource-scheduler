@@ -1,0 +1,269 @@
+<!doctype html>
+<!-- Mission Contact Resource Scheduler by Jason Stys. UI landmarks/variables: docs/CODE_INDEX.md. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An offline synthetic contact and resource planning lab by Jason Stys."
+    />
+    <title>Mission Contact Resource Scheduler — Jason Stys</title>
+    <script type="module" src="/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#workspace">Skip to workspace</a>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Contact scheduler home"
+        ><span class="brand-symbol" aria-hidden="true">C/R</span
+        ><span>CONTACT / RESOURCE<span class="brand-sub">PLANNING SYSTEMS LAB</span></span></a
+      >
+      <div class="top-links">
+        <span class="local-dot">OFFLINE · SYNTHETIC</span><a href="#help">Field guide ↗</a
+        ><a href="https://github.com/JasonStys" target="_blank" rel="noopener noreferrer"
+          >Jason Stys ↗</a
+        >
+      </div>
+    </header>
+    <main id="workspace">
+      <section class="intro">
+        <div>
+          <p class="eyebrow">MISSION CONTACT RESOURCE SCHEDULER / 01</p>
+          <h1>One network.<br /><span>Competing missions.</span></h1>
+          <p class="lede">
+            Build a feasible contact plan. See the trade-offs.<br />Every window, constraint and
+            decision—out in the open.
+          </p>
+        </div>
+        <aside class="scope">
+          <span class="scope-icon" aria-hidden="true">◎</span>
+          <p class="eyebrow">A BOUNDED PLANNING LAB</p>
+          <p>3 stations. 3 spacecraft.<br />120 logical ticks. No live connections.</p>
+          <p class="muted">
+            Optimal means best among the supplied fixed windows—not an operational mission plan.
+          </p>
+        </aside>
+      </section>
+      <section class="configuration" aria-labelledby="config-heading">
+        <div class="section-label">
+          <h2 id="config-heading">01 / Set the problem</h2>
+          <span>Finite, reproducible controls</span>
+        </div>
+        <form id="controls">
+          <label class="scenario-control"
+            >Scenario<select id="scenario" name="scenario">
+              <option value="nominal">Shared ground network</option>
+              <option value="station-outage">BRAVO unavailable</option>
+              <option value="maintenance">Two maintenance blocks</option>
+              <option value="tight-energy">SC-B energy constrained</option>
+              <option value="urgent-insertion">Late high-value request</option>
+              <option value="impossible-deadline">Impossible deadline</option>
+              <option value="greedy-trap">Greedy trap</option>
+              <option value="unreachable-window">All stations unavailable</option>
+            </select></label
+          >
+          <label
+            >Guard / side<select id="guard" name="guard">
+              <option value="0">0 ticks</option>
+              <option value="1" selected>1 tick</option>
+              <option value="2">2 ticks</option>
+            </select></label
+          >
+          <label
+            >Energy / craft<select id="energy_cap" name="energy_cap">
+              <option value="12">12 units</option>
+              <option value="24" selected>24 units</option>
+              <option value="40">40 units</option>
+            </select></label
+          >
+          <label
+            >Station budget<select id="station_budget" name="station_budget">
+              <option value="24">24 ticks</option>
+              <option value="36" selected>36 ticks</option>
+              <option value="60">60 ticks</option>
+            </select></label
+          >
+          <label
+            >Objective<select id="policy" name="policy">
+              <option value="0">Data throughput</option>
+              <option value="1" selected>Priority × data</option>
+            </select></label
+          >
+          <button class="primary" type="submit" id="run-button">
+            Solve allocation <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+        <div class="control-note">
+          <label class="remember"
+            ><input id="remember" type="checkbox" /> Remember these controls on this device</label
+          ><span>Invented data & energy units · half-open time intervals</span>
+        </div>
+      </section>
+      <p id="status" role="status" aria-live="polite">Preparing the local planner…</p>
+      <section id="error" class="error" role="alert" hidden>
+        <h2>Plan unavailable</h2>
+        <p>
+          The local service could not return evidence. Previous results are hidden to avoid showing
+          a stale plan.
+        </p>
+        <button id="retry" type="button">Retry allocation</button>
+      </section>
+      <div id="results" hidden>
+        <section id="metrics" class="metrics" aria-label="Exact plan summary"></section>
+        <section class="panel timeline-panel" aria-labelledby="timeline-heading">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">02 / CONTACT TIMELINE</p>
+              <h2 id="timeline-heading">The allocation, at a glance.</h2>
+            </div>
+            <div class="plan-switch" role="group" aria-label="Displayed plan">
+              <button id="exact-view" type="button" aria-pressed="true">Exact plan</button
+              ><button id="greedy-view" type="button" aria-pressed="false">Greedy baseline</button>
+            </div>
+          </div>
+          <div class="chart-toolbar">
+            <p id="plan-caption"></p>
+            <label
+              >Spacecraft filter<select id="craft-filter">
+                <option value="ALL">All spacecraft</option>
+                <option>SC-A</option>
+                <option>SC-B</option>
+                <option>SC-C</option>
+              </select></label
+            >
+          </div>
+          <div id="timeline"></div>
+          <div class="chart-key">
+            <span class="key craft-a">SC-A</span><span class="key craft-b">SC-B</span
+            ><span class="key craft-c">SC-C</span><span class="key guard-key">Reserved guard</span
+            ><span class="key blackout-key">Station blackout</span
+            ><span class="axis-note">Relative logical ticks / [start, end)</span>
+          </div>
+          <p class="chart-note">
+            The filter changes this drawing only. All totals, constraints and exports still describe
+            the complete plan.
+          </p>
+        </section>
+        <div class="detail-grid">
+          <section class="panel" aria-labelledby="inspector-heading">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">03 / DECISION INSPECTOR</p>
+                <h2 id="inspector-heading">Why this window?</h2>
+              </div>
+            </div>
+            <label>Candidate window<select id="candidate"></select></label>
+            <div id="inspection"></div>
+          </section>
+          <section class="panel" aria-labelledby="budget-heading">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">04 / RESOURCE LEDGER</p>
+                <h2 id="budget-heading">Know the limits.</h2>
+              </div>
+              <span class="pill">Exact plan</span>
+            </div>
+            <div id="budgets"></div>
+          </section>
+        </div>
+        <section class="panel" aria-labelledby="requests-heading">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">05 / REQUEST COVERAGE</p>
+              <h2 id="requests-heading">Nothing silently dropped.</h2>
+            </div>
+            <span id="coverage" class="pill"></span>
+          </div>
+          <div
+            class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Scrollable request coverage"
+          >
+            <table>
+              <caption class="sr-only">
+                All optional requests, their constraints and exact plan outcomes
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Request / craft</th>
+                  <th scope="col">Window</th>
+                  <th scope="col">Data / priority</th>
+                  <th scope="col">Exact allocation</th>
+                </tr>
+              </thead>
+              <tbody id="request-rows"></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="exports" aria-labelledby="exports-heading">
+          <div>
+            <p class="eyebrow">06 / REPRODUCIBLE EVIDENCE</p>
+            <h2 id="exports-heading">Take the whole decision with you.</h2>
+            <p>Inputs, both plans, blockers, audit and a content hash. No account needed.</p>
+          </div>
+          <nav id="downloads" aria-label="Download evidence"></nav>
+        </section>
+        <p class="evidence-id" id="evidence-id"></p>
+      </div>
+      <section id="help" class="help" aria-labelledby="help-heading">
+        <p class="eyebrow">FIELD GUIDE</p>
+        <h2 id="help-heading">A small problem. An inspectable solution.</h2>
+        <div class="help-grid">
+          <article>
+            <h3>Start with the greedy trap</h3>
+            <p>
+              One long contact offers 100 utility. Two compatible shorter contacts offer 120.
+              Compare exact and greedy plans to see why local choices can miss a better allocation.
+            </p>
+          </article>
+          <article>
+            <h3>What is being optimized?</h3>
+            <p>
+              Every request is optional and delivered in full. Maximize data or priority × data;
+              then minimize energy, occupied station ticks, and finally lexical option IDs. Exact
+              search covers only the supplied candidates.
+            </p>
+          </article>
+          <article>
+            <h3>Read the constraints</h3>
+            <p>
+              Stations reserve guard time on both sides. Spacecraft reserve transmission only.
+              Windows are half-open: an interval ending where another starts does not overlap.
+              Blackouts, deadlines, bands and budgets must all hold.
+            </p>
+          </article>
+          <article>
+            <h3>Privacy & limits</h3>
+            <p>
+              Everything runs on your device. No telemetry, ads, accounts, remote services or live
+              spacecraft commands. Only controls are saved if you opt in. CLI imports are capped at
+              9 requests / 18 windows; real mission operations are out of scope.
+            </p>
+          </article>
+        </div>
+        <p class="help-links">
+          <a
+            href="https://github.com/JasonStys/mission-contact-resource-scheduler/tree/main/docs"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Model, CLI & test documentation ↗</a
+          ><a
+            href="https://github.com/JasonStys/mission-contact-resource-scheduler/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Report an issue ↗</a
+          >
+        </p>
+      </section>
+    </main>
+    <footer>
+      <span
+        >Designed & engineered by
+        <a href="https://github.com/JasonStys" target="_blank" rel="noopener noreferrer"
+          >Jason Stys</a
+        ></span
+      ><span>EDUCATIONAL SYSTEMS / v1.0.0 / MIT</span>
+    </footer>
+  </body>
+</html>
