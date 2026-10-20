@@ -105,6 +105,23 @@ test("API failure hides evidence and manual retry recovers", async ({ page }) =>
   await expect(page.getByRole("alert")).toBeHidden();
 });
 
+test("unexpected markup in API numeric fields remains inert", async ({ page }) => {
+  const payload = '<img src=x onerror="alert(1)">';
+  await page.route("**/api/run?**", async (route) => {
+    const response = await route.fetch();
+    const body = await response.json();
+    body.exact.utility = payload;
+    body.station_usage[0].used = payload;
+    body.requests[0].release = payload;
+    await route.fulfill({ response, json: body });
+  });
+  await ready(page);
+  await expect(page.getByTestId("utility")).toHaveText(payload);
+  await expect(page.locator("#results img")).toHaveCount(0);
+  await expect(page.locator("#budgets")).toContainText(payload);
+  await expect(page.locator("#request-rows")).toContainText(payload);
+});
+
 test("optional preferences, mobile layout, accessibility and security headers", async ({
   page,
   request,

@@ -662,8 +662,11 @@ Line numbers refer to formatted source, not this generated document.
 | 87 | `wait` |
 | 89 | `download` |
 | 91 | `path` |
-| 127 | `scan` |
-| 132 | `response` |
+| 109 | `payload` |
+| 111 | `response` |
+| 112 | `body` |
+| 144 | `scan` |
+| 149 | `response` |
 
 ## tools/benchmark.py
 

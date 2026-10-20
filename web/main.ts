@@ -78,7 +78,7 @@ function inspect(): void {
   }
   const req = current.requests.find((request) => request.id === item.request)!;
   element("inspection").innerHTML =
-    `<p class="decision ${item.selected ? "accepted" : "deferred"}">${item.selected ? "SELECTED IN EXACT PLAN" : "NOT SELECTED IN EXACT PLAN"}</p><h3>${esc(item.request)} / ${esc(item.spacecraft)} → ${esc(item.station)}</h3><dl class="facts"><div><dt>Transmission</dt><dd>[${item.start}, ${item.end})</dd></div><div><dt>Station reservation</dt><dd>[${item.start - current.settings.guard}, ${item.end + current.settings.guard})</dd></div><div><dt>Required window</dt><dd>[${req.release}, ${req.deadline})</dd></div><div><dt>Data / capacity</dt><dd>${req.units} / ${(item.end - item.start) * item.rate} units</dd></div><div><dt>Energy / band</dt><dd>${item.energy} units / ${esc(req.band)}</dd></div><div><dt>Greedy baseline</dt><dd>${item.baseline ? "Selected" : "Not selected"}</dd></div></dl>${item.selected ? '<p class="inspector-note">Passes all constraints within the complete exact allocation.</p>' : `<ul class="reasons">${item.reasons.map((reason) => `<li>${esc(reason.replaceAll("-", " "))}</li>`).join("")}</ul><p class="inspector-note">Obstacles relative to the final exact plan. This is not a minimal conflict set or the only possible allocation.</p>`}`;
+    `<p class="decision ${item.selected ? "accepted" : "deferred"}">${item.selected ? "SELECTED IN EXACT PLAN" : "NOT SELECTED IN EXACT PLAN"}</p><h3>${esc(item.request)} / ${esc(item.spacecraft)} → ${esc(item.station)}</h3><dl class="facts"><div><dt>Transmission</dt><dd>[${esc(item.start)}, ${esc(item.end)})</dd></div><div><dt>Station reservation</dt><dd>[${esc(item.start - current.settings.guard)}, ${esc(item.end + current.settings.guard)})</dd></div><div><dt>Required window</dt><dd>[${esc(req.release)}, ${esc(req.deadline)})</dd></div><div><dt>Data / capacity</dt><dd>${esc(req.units)} / ${esc((item.end - item.start) * item.rate)} units</dd></div><div><dt>Energy / band</dt><dd>${esc(item.energy)} units / ${esc(req.band)}</dd></div><div><dt>Greedy baseline</dt><dd>${item.baseline ? "Selected" : "Not selected"}</dd></div></dl>${item.selected ? '<p class="inspector-note">Passes all constraints within the complete exact allocation.</p>' : `<ul class="reasons">${item.reasons.map((reason) => `<li>${esc(reason.replaceAll("-", " "))}</li>`).join("")}</ul><p class="inspector-note">Obstacles relative to the final exact plan. This is not a minimal conflict set or the only possible allocation.</p>`}`;
 }
 
 /** Switch drawing only; exact-plan budget/request summaries and exports retain their labels. */
@@ -100,7 +100,7 @@ function displayTimeline(): void {
 function render(run: Evidence): void {
   const exact = run.exact;
   element("metrics").innerHTML =
-    `<article><p>EXACT UTILITY</p><strong data-testid="utility">${exact.utility}</strong><span>${run.settings.policy ? "priority × delivered data" : "delivered data units"}</span></article><article><p>VS. GREEDY BASELINE</p><strong class="teal">+${run.delta}</strong><span>baseline utility ${run.greedy.utility}</span></article><article><p>REQUESTS FULFILLED</p><strong>${exact.fulfilled}<small> / ${run.requests.length}</small></strong><span>${exact.units} data units delivered</span></article><article><p>CONSTRAINT AUDIT</p><strong>${exact.violations.length}<small> violations</small></strong><span>finite-candidate optimum · ${exact.visited_nodes} search nodes</span></article>`;
+    `<article><p>EXACT UTILITY</p><strong data-testid="utility">${esc(exact.utility)}</strong><span>${run.settings.policy ? "priority × delivered data" : "delivered data units"}</span></article><article><p>VS. GREEDY BASELINE</p><strong class="teal">+${esc(run.delta)}</strong><span>baseline utility ${esc(run.greedy.utility)}</span></article><article><p>REQUESTS FULFILLED</p><strong>${esc(exact.fulfilled)}<small> / ${esc(run.requests.length)}</small></strong><span>${esc(exact.units)} data units delivered</span></article><article><p>CONSTRAINT AUDIT</p><strong>${esc(exact.violations.length)}<small> violations</small></strong><span>finite-candidate optimum · ${esc(exact.visited_nodes)} search nodes</span></article>`;
   const selected = element<HTMLSelectElement>("candidate");
   const previous = selected.value;
   selected.innerHTML = run.candidates
@@ -117,13 +117,13 @@ function render(run: Evidence): void {
   ]
     .map(
       ([title, rows]) =>
-        `<h3 class="budget-title">${esc(title)}</h3>${(rows as Evidence["station_usage"]).map((item) => `<div class="budget-row"><div><label for="budget-${esc(item.name)}">${esc(item.name)}</label><span>${item.used} / ${item.budget}</span></div><progress id="budget-${esc(item.name)}" max="${item.budget}" value="${item.used}">${item.used} of ${item.budget}</progress></div>`).join("")}`,
+        `<h3 class="budget-title">${esc(title)}</h3>${(rows as Evidence["station_usage"]).map((item) => `<div class="budget-row"><div><label for="budget-${esc(item.name)}">${esc(item.name)}</label><span>${esc(item.used)} / ${esc(item.budget)}</span></div><progress id="budget-${esc(item.name)}" max="${esc(item.budget)}" value="${esc(item.used)}">${esc(item.used)} of ${esc(item.budget)}</progress></div>`).join("")}`,
     )
     .join("");
   element("request-rows").innerHTML = run.requests
     .map(
       (req) =>
-        `<tr><th scope="row">${esc(req.id)} <span>${esc(req.spacecraft)} · ${esc(req.band)}</span></th><td>[${req.release}, ${req.deadline})</td><td>${req.units} units <span>priority ${req.priority}</span></td><td><span class="outcome ${req.selected ? "yes" : "no"}">${esc(req.selected ?? "Unscheduled")}</span><span>${req.alternatives.length ? esc(req.alternatives.join(" / ")) : "No candidate windows"}</span></td></tr>`,
+        `<tr><th scope="row">${esc(req.id)} <span>${esc(req.spacecraft)} · ${esc(req.band)}</span></th><td>[${esc(req.release)}, ${esc(req.deadline)})</td><td>${esc(req.units)} units <span>priority ${esc(req.priority)}</span></td><td><span class="outcome ${req.selected ? "yes" : "no"}">${esc(req.selected ?? "Unscheduled")}</span><span>${req.alternatives.length ? esc(req.alternatives.join(" / ")) : "No candidate windows"}</span></td></tr>`,
     )
     .join("");
   element("coverage").textContent = `${run.requests.length - exact.fulfilled} unscheduled`;
@@ -135,7 +135,7 @@ function render(run: Evidence): void {
   ]
     .map(
       ([format, label]) =>
-        `<a download href="/api/report?${query(settings())}&amp;format=${format}">${label} ↓</a>`,
+        `<a download href="/api/report?${esc(query(settings()))}&amp;format=${format}">${label} ↓</a>`,
     )
     .join("");
   element("evidence-id").textContent = `SHA-256 / ${run.id}`;

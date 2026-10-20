@@ -18,7 +18,7 @@ The uncached urgent-insertion benchmark measured approximately 1.66 ms median ov
 
 Browser and portable-release results are recorded after their actual verification; see [reports/ci-baseline.md](reports/ci-baseline.md) and exact workflow/release links. A badge alone is not evidence that every feature or environment is supported.
 
-All 21 local browser acceptance checks passed (seven each in Chromium, Firefox and WebKit), including actual downloads, mobile axe scans and keyboard access. The actual local Windows frozen executable also passed CLI JSON export, production HTML/assets, health and greedy-trap API smoke tests.
+All 24 local browser acceptance checks passed (eight each in Chromium, Firefox and WebKit), including actual downloads, mobile axe scans, keyboard access and hostile-response rendering. The actual local Windows frozen executable also passed CLI JSON export, production HTML/assets, health and greedy-trap API smoke tests.
 
 ## Layered checks
 
@@ -36,6 +36,7 @@ All 21 local browser acceptance checks passed (seven each in Chromium, Firefox a
 - Windows pytest-generated temporary names were too long when raw 64 KiB malformed data became a parameter ID. Short semantic test IDs fix the test harness without reducing payload/edge-case coverage.
 - Strict warning policy detected deprecated iterable parametrization; materialized the six combinations instead of filtering the warning.
 - A redundant development CSS import was rejected by Vite; removed it. All styling remains local, with no remote fonts/imports.
+- Final review added defense-in-depth HTML escaping even for API fields guaranteed numeric by the Python service. A hostile-response regression confirms numeric-field markup remains text rather than creating elements, across all three engines.
 
 The debugging skill guided reproduction, isolation, root-cause fixes and regression assertions. Production constraints, oracle checks and security gates were not loosened to make tests pass.
 
