@@ -21,6 +21,7 @@ from scheduler.model import (
     case_data,
     load_case,
 )
+from scheduler.replanning import station_outages
 from scheduler.solver import blockers, solve
 
 CHOICES = {
@@ -167,6 +168,7 @@ def evaluate(case: Case, settings: Settings, source: str) -> dict[str, Any]:
         "exact": exact,
         "greedy": greedy,
         "delta": exact["utility"] - greedy["utility"],
+        "outage_comparisons": station_outages(case, settings.guard, settings.policy, exact),
         "candidates": candidates,
         "requests": [
             {

@@ -79,6 +79,19 @@ export interface Evidence {
   exact: Plan;
   greedy: Plan;
   delta: number;
+  outage_comparisons: {
+    station: string;
+    outage: { start: number; end: number };
+    exact: Plan;
+    retained: string[];
+    removed: string[];
+    added: string[];
+    utility_loss: number;
+    fulfilled_delta: number;
+    energy_delta: number;
+    directly_blocked: { id: string; reasons: string[] }[];
+    request_changes: { request: string; before: string | null; after: string | null }[];
+  }[];
   candidates: Candidate[];
   requests: RequestInfo[];
   station_usage: Usage[];

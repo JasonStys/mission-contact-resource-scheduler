@@ -14,6 +14,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `SECURITY.md` — # Security and safe use
 - `docs/API.md` — # Input, HTTP and evidence contracts
 - `docs/ARCHITECTURE.md` — # Architecture decisions
+- `docs/CONTINGENCY.md` — # Compare station-loss plans
 - `docs/MODEL.md` — # Model, objective and limits
 - `docs/RELEASE.md` — # Release and rollback procedure
 - `docs/THIRD_PARTY.md` — # Dependencies, notices and research
@@ -21,6 +22,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/VALIDATION.md` — # Validation evidence and strategy
 - `docs/images/overview.jpg` — Binary screenshot asset from local application validation
 - `docs/images/workspace.jpg` — Binary screenshot asset from local application validation
+- `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Station-loss workflow validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed synthetic scheduler benchmark summaries and deterministic evidence hashes.
 - `docs/reports/ci-baseline.md` — # CI and release verification record
 - `examples/nominal.json` — Editable strict JSON case with invented requests, candidate contacts and resource budgets.
@@ -38,12 +40,14 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `scheduler/__main__.py` — """Local website launcher and reproducible export CLI by Jason Stys.
 - `scheduler/engine.py` — """Reviewed synthetic scenarios and canonical experiment evidence by Jason Stys.
 - `scheduler/model.py` — """Strict finite planning inputs by Jason Stys.
+- `scheduler/replanning.py` — """Station-loss contingency comparisons by Jason Stys.
 - `scheduler/reports.py` — """Deterministic inert exports and explicit local SQL history by Jason Stys.
 - `scheduler/resources/history.sql` — -- Immutable local experiment history by Jason Stys. Tables/triggers: docs/CODE_INDEX.md.
 - `scheduler/server.py` — """Loopback-only, read-only HTTP application by Jason Stys; not an Internet server.
 - `scheduler/solver.py` — """Deterministic greedy and exact branch-and-bound planning by Jason Stys.
 - `tests/test_io.py` — """CLI, report, SQLite and actual loopback HTTP integration tests by Jason Stys.
 - `tests/test_model.py` — """Strict input, canonical provenance and finite control tests by Jason Stys.
+- `tests/test_replanning.py` — """Independent contingency oracles by Jason Stys.
 - `tests/test_solver.py` — """Independent exhaustive oracle, grid and constraint tests by Jason Stys.
 - `tests/ui.spec.ts` — /** Production-handler, three-engine browser acceptance tests by Jason Stys.
 - `tools/benchmark.py` — """Portable deterministic scheduler contracts and descriptive timing by Jason Stys.

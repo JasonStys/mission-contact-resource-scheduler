@@ -109,6 +109,15 @@
         <button id="retry" type="button">Retry allocation</button>
       </section>
       <div id="results" hidden>
+        <section class="panel" aria-labelledby="outage-heading">
+          <h2 id="outage-heading">Single-station loss contingency</h2>
+          <p>
+            Compare the current exact plan with each station unavailable for the full 120-tick
+            window. Existing blackouts, requests, budgets and guard rules remain in force. These are
+            alternative scenarios, not sequential failures or dispatch instructions.
+          </p>
+          <div id="outage-comparisons"></div>
+        </section>
         <section id="metrics" class="metrics" aria-label="Exact plan summary"></section>
         <section class="panel timeline-panel" aria-labelledby="timeline-heading">
           <div class="panel-head">

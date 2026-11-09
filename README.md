@@ -2,6 +2,8 @@
 
 An offline contact-planning workbench by **Jason Stys**. Allocate fixed synthetic contact windows across a shared ground network, inspect the constraints, and compare an exact optimum with a greedy baseline.
 
+The **single-station loss contingency** workflow now reoptimizes each full-window station outage, showing retained/removed/added contacts, before/after request assignments and service/energy changes. Every alternative preserves the current case's budgets and remaining constraints and uses the same exact objective. This is a contingency comparison, not a minimum-change or operational dispatch optimizer. See [the contingency guide](docs/CONTINGENCY.md).
+
 [![Validation](https://github.com/JasonStys/mission-contact-resource-scheduler/actions/workflows/validate.yml/badge.svg)](https://github.com/JasonStys/mission-contact-resource-scheduler/actions/workflows/validate.yml)
 [![CodeQL](https://github.com/JasonStys/mission-contact-resource-scheduler/actions/workflows/codeql.yml/badge.svg)](https://github.com/JasonStys/mission-contact-resource-scheduler/actions/workflows/codeql.yml)
 

@@ -99,6 +99,24 @@ function displayTimeline(): void {
 /** Render bounded escaped evidence and fixed same-origin downloads; never persist reports. */
 function render(run: Evidence): void {
   const exact = run.exact;
+  element("outage-comparisons").replaceChildren();
+  for (const comparison of run.outage_comparisons) {
+    const section = document.createElement("details");
+    const summary = document.createElement("summary");
+    summary.textContent = `${comparison.station} unavailable [${comparison.outage.start}, ${comparison.outage.end}) · utility ${comparison.exact.utility} (loss ${comparison.utility_loss}) · ${comparison.exact.fulfilled} contacts`;
+    const explanation = document.createElement("p");
+    explanation.textContent = `Retained: ${comparison.retained.join(", ") || "none"}. Removed: ${comparison.removed.join(", ") || "none"}. Added: ${comparison.added.join(", ") || "none"}. Energy change ${comparison.energy_delta}; fulfilled change ${comparison.fulfilled_delta}. Exact constraint violations: ${comparison.exact.violations.length}.`;
+    const list = document.createElement("ul");
+    for (const change of comparison.request_changes) {
+      const item = document.createElement("li");
+      item.textContent = `${change.request}: ${change.before ?? "unscheduled"} → ${change.after ?? "unscheduled"}`;
+      list.append(item);
+    }
+    const blocked = document.createElement("p");
+    blocked.textContent = `Directly infeasible original contacts: ${comparison.directly_blocked.map((item) => `${item.id} (${item.reasons.join(", ")})`).join("; ") || "none"}. Other changes follow the complete reoptimized objective; they are not minimal-change guarantees.`;
+    section.append(summary, explanation, list, blocked);
+    element("outage-comparisons").append(section);
+  }
   element("metrics").innerHTML =
     `<article><p>EXACT UTILITY</p><strong data-testid="utility">${esc(exact.utility)}</strong><span>${run.settings.policy ? "priority × delivered data" : "delivered data units"}</span></article><article><p>VS. GREEDY BASELINE</p><strong class="teal">+${esc(run.delta)}</strong><span>baseline utility ${esc(run.greedy.utility)}</span></article><article><p>REQUESTS FULFILLED</p><strong>${esc(exact.fulfilled)}<small> / ${esc(run.requests.length)}</small></strong><span>${esc(exact.units)} data units delivered</span></article><article><p>CONSTRAINT AUDIT</p><strong>${esc(exact.violations.length)}<small> violations</small></strong><span>finite-candidate optimum · ${esc(exact.visited_nodes)} search nodes</span></article>`;
   const selected = element<HTMLSelectElement>("candidate");

@@ -37,6 +37,24 @@ test("exact plan beats greedy trap and inspection explains conflict", async ({ p
   expect(errors).toEqual([]);
 });
 
+test("station-loss comparison explains exact alternative contacts and empty service", async ({
+  page,
+}) => {
+  await ready(page);
+  await expect(page.locator("#outage-comparisons details")).toHaveCount(3);
+  await solve(page, "greedy-trap");
+  const alpha = page.locator("#outage-comparisons details").first();
+  await alpha.locator("summary").click();
+  await expect(alpha).toContainText("utility 0 (loss 120)");
+  await expect(alpha).toContainText("Removed: B1, C1");
+  await expect(alpha).toContainText("R02: B1 → unscheduled");
+  await expect(alpha).toContainText("station-blackout");
+  await expect(page.locator("#plan-caption")).toContainText("Exact plan · 120 utility");
+  await solve(page, "unreachable-window");
+  await expect(page.locator("#outage-comparisons summary").first()).toContainText(
+    "utility 0 (loss 0)",
+  );
+});
 test("guard boundaries, filtering and stale controls stay explicit", async ({ page }) => {
   await ready(page);
   await solve(page, "greedy-trap");

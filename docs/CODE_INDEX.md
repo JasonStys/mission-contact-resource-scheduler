@@ -69,76 +69,76 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 26 | `variable CHOICES` |
-| 32 | `variable SCENARIOS` |
-| 45 | `definition Settings` |
-| 48 | `variable scenario` |
-| 49 | `variable guard` |
-| 50 | `variable energy_cap` |
-| 51 | `variable station_budget` |
-| 52 | `variable policy` |
-| 54 | `definition __post_init__` |
-| 54 | `parameter self` |
-| 58 | `variable key` |
-| 58 | `variable values` |
-| 59 | `variable value` |
-| 64 | `definition fixture` |
-| 64 | `parameter settings` |
-| 66 | `variable requests` |
-| 68 | `variable values` |
-| 79 | `variable options` |
-| 81 | `variable values` |
-| 100 | `variable blackouts` |
-| 101 | `variable energy` |
-| 104 | `variable blackouts` |
-| 106 | `variable blackouts` |
-| 108 | `variable energy` |
-| 110 | `variable requests` |
-| 111 | `variable options` |
-| 116 | `variable requests` |
-| 117 | `variable item` |
-| 120 | `variable requests` |
-| 121 | `variable item` |
-| 121 | `variable options` |
-| 123 | `variable blackouts` |
-| 123 | `variable name` |
-| 127 | `definition canonical` |
-| 127 | `parameter data` |
-| 132 | `definition run_id` |
-| 132 | `parameter data` |
-| 135 | `variable item` |
-| 135 | `variable key` |
-| 139 | `definition evaluate` |
-| 139 | `parameter case` |
-| 139 | `parameter settings` |
-| 139 | `parameter source` |
-| 141 | `variable exact` |
-| 141 | `variable greedy` |
-| 142 | `variable chosen` |
-| 142 | `variable item` |
-| 143 | `variable request` |
-| 143 | `variable requests` |
-| 144 | `variable candidates` |
-| 145 | `parameter item` |
-| 145 | `variable item` |
-| 157 | `variable configuration` |
-| 162 | `variable result` |
-| 174 | `variable item` |
-| 175 | `variable item` |
-| 177 | `parameter item` |
-| 177 | `variable request` |
-| 184 | `variable item` |
-| 189 | `variable index` |
-| 189 | `variable name` |
-| 195 | `variable item` |
-| 199 | `variable index` |
-| 199 | `variable name` |
-| 214 | `definition build_run` |
-| 214 | `parameter settings` |
-| 219 | `definition build_import` |
-| 219 | `parameter path` |
-| 219 | `parameter settings` |
-| 224 | `definition catalog` |
+| 27 | `variable CHOICES` |
+| 33 | `variable SCENARIOS` |
+| 46 | `definition Settings` |
+| 49 | `variable scenario` |
+| 50 | `variable guard` |
+| 51 | `variable energy_cap` |
+| 52 | `variable station_budget` |
+| 53 | `variable policy` |
+| 55 | `definition __post_init__` |
+| 55 | `parameter self` |
+| 59 | `variable key` |
+| 59 | `variable values` |
+| 60 | `variable value` |
+| 65 | `definition fixture` |
+| 65 | `parameter settings` |
+| 67 | `variable requests` |
+| 69 | `variable values` |
+| 80 | `variable options` |
+| 82 | `variable values` |
+| 101 | `variable blackouts` |
+| 102 | `variable energy` |
+| 105 | `variable blackouts` |
+| 107 | `variable blackouts` |
+| 109 | `variable energy` |
+| 111 | `variable requests` |
+| 112 | `variable options` |
+| 117 | `variable requests` |
+| 118 | `variable item` |
+| 121 | `variable requests` |
+| 122 | `variable item` |
+| 122 | `variable options` |
+| 124 | `variable blackouts` |
+| 124 | `variable name` |
+| 128 | `definition canonical` |
+| 128 | `parameter data` |
+| 133 | `definition run_id` |
+| 133 | `parameter data` |
+| 136 | `variable item` |
+| 136 | `variable key` |
+| 140 | `definition evaluate` |
+| 140 | `parameter case` |
+| 140 | `parameter settings` |
+| 140 | `parameter source` |
+| 142 | `variable exact` |
+| 142 | `variable greedy` |
+| 143 | `variable chosen` |
+| 143 | `variable item` |
+| 144 | `variable request` |
+| 144 | `variable requests` |
+| 145 | `variable candidates` |
+| 146 | `parameter item` |
+| 146 | `variable item` |
+| 158 | `variable configuration` |
+| 163 | `variable result` |
+| 176 | `variable item` |
+| 177 | `variable item` |
+| 179 | `parameter item` |
+| 179 | `variable request` |
+| 186 | `variable item` |
+| 191 | `variable index` |
+| 191 | `variable name` |
+| 197 | `variable item` |
+| 201 | `variable index` |
+| 201 | `variable name` |
+| 216 | `definition build_run` |
+| 216 | `parameter settings` |
+| 221 | `definition build_import` |
+| 221 | `parameter path` |
+| 221 | `parameter settings` |
+| 226 | `definition catalog` |
 
 ## scheduler/model.py
 
@@ -235,6 +235,32 @@ Line numbers refer to formatted source, not this generated document.
 | 202 | `parameter path` |
 | 204 | `variable source` |
 | 205 | `variable raw` |
+
+## scheduler/replanning.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 14 | `definition station_outages` |
+| 15 | `parameter baseline` |
+| 15 | `parameter case` |
+| 15 | `parameter guard` |
+| 15 | `parameter policy` |
+| 24 | `variable comparisons` |
+| 25 | `variable before` |
+| 26 | `variable station` |
+| 27 | `variable disrupted` |
+| 29 | `variable option` |
+| 31 | `variable exact` |
+| 31 | `variable greedy` |
+| 32 | `variable after` |
+| 47 | `parameter item` |
+| 47 | `variable option` |
+| 56 | `variable o` |
+| 64 | `variable o` |
+| 70 | `parameter item` |
+| 70 | `variable request` |
+| 71 | `variable o` |
+| 72 | `variable o` |
 
 ## scheduler/reports.py
 
@@ -553,6 +579,43 @@ Line numbers refer to formatted source, not this generated document.
 | 185 | `variable case` |
 | 186 | `variable data` |
 
+## tests/test_replanning.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 22 | `definition test_outage_optimum_matches_independent_subset_oracle` |
+| 22 | `parameter guard` |
+| 22 | `parameter policy` |
+| 22 | `parameter scenario` |
+| 24 | `variable settings` |
+| 25 | `variable case` |
+| 26 | `variable before` |
+| 27 | `variable _` |
+| 27 | `variable baseline` |
+| 28 | `variable result` |
+| 29 | `variable disrupted` |
+| 31 | `variable b` |
+| 34 | `variable plan` |
+| 45 | `variable item` |
+| 49 | `definition test_no_options_and_full_blackout_input_cap` |
+| 51 | `variable case` |
+| 52 | `variable case` |
+| 55 | `variable tick` |
+| 57 | `variable result` |
+| 59 | `variable item` |
+| 60 | `variable run` |
+| 62 | `variable item` |
+| 65 | `definition test_six_blocks_on_other_station_preserve_original_constraints` |
+| 67 | `variable case` |
+| 69 | `variable tick` |
+| 71 | `variable baseline` |
+| 72 | `variable result` |
+| 73 | `variable comparison` |
+| 73 | `variable station` |
+| 74 | `variable disrupted` |
+| 74 | `variable o` |
+| 75 | `variable optimum` |
+
 ## tests/test_solver.py
 
 | Line | Definition / variable / structural identifier |
@@ -659,14 +722,15 @@ Line numbers refer to formatted source, not this generated document.
 | 10 | `ready` |
 | 15 | `solve` |
 | 22 | `errors` |
-| 87 | `wait` |
-| 89 | `download` |
-| 91 | `path` |
-| 109 | `payload` |
-| 111 | `response` |
-| 112 | `body` |
-| 144 | `scan` |
-| 149 | `response` |
+| 46 | `alpha` |
+| 105 | `wait` |
+| 107 | `download` |
+| 109 | `path` |
+| 127 | `payload` |
+| 129 | `response` |
+| 130 | `body` |
+| 162 | `scan` |
+| 167 | `response` |
 
 ## tools/benchmark.py
 
@@ -881,29 +945,41 @@ Line numbers refer to formatted source, not this generated document.
 | 79 | `exact` |
 | 80 | `greedy` |
 | 81 | `delta` |
-| 82 | `candidates` |
-| 83 | `requests` |
-| 84 | `station_usage` |
-| 85 | `energy_usage` |
-| 86 | `case` |
-| 90 | `escapeText` |
-| 98 | `readPreferences` |
-| 101 | `value` |
-| 103 | `obj` |
-| 120 | `query` |
-| 127 | `timelineMarkup` |
-| 128 | `plan` |
-| 129 | `selected` |
-| 132 | `stations` |
-| 133 | `x` |
-| 134 | `ticks` |
-| 135 | `tick` |
-| 138 | `lanes` |
-| 140 | `y` |
-| 141 | `blocked` |
-| 148 | `bars` |
-| 158 | `timeline-description` |
-| 158 | `timeline-title` |
+| 82 | `outage_comparisons` |
+| 83 | `station` |
+| 84 | `outage` |
+| 85 | `exact` |
+| 86 | `retained` |
+| 87 | `removed` |
+| 88 | `added` |
+| 89 | `utility_loss` |
+| 90 | `fulfilled_delta` |
+| 91 | `energy_delta` |
+| 92 | `directly_blocked` |
+| 93 | `request_changes` |
+| 95 | `candidates` |
+| 96 | `requests` |
+| 97 | `station_usage` |
+| 98 | `energy_usage` |
+| 99 | `case` |
+| 103 | `escapeText` |
+| 111 | `readPreferences` |
+| 114 | `value` |
+| 116 | `obj` |
+| 133 | `query` |
+| 140 | `timelineMarkup` |
+| 141 | `plan` |
+| 142 | `selected` |
+| 145 | `stations` |
+| 146 | `x` |
+| 147 | `ticks` |
+| 148 | `tick` |
+| 151 | `lanes` |
+| 153 | `y` |
+| 154 | `blocked` |
+| 161 | `bars` |
+| 171 | `timeline-description` |
+| 171 | `timeline-title` |
 
 ## web/env.d.ts
 
@@ -930,36 +1006,38 @@ Line numbers refer to formatted source, not this generated document.
 | 103 | `error` |
 | 109 | `retry` |
 | 111 | `results` |
-| 112 | `metrics` |
-| 117 | `timeline-heading` |
-| 120 | `exact-view` |
-| 121 | `greedy-view` |
-| 125 | `plan-caption` |
-| 127 | `craft-filter` |
-| 135 | `timeline` |
-| 152 | `inspector-heading` |
-| 155 | `candidate` |
-| 156 | `inspection` |
-| 162 | `budget-heading` |
-| 166 | `budgets` |
-| 173 | `requests-heading` |
-| 175 | `coverage` |
-| 178 | `class` |
-| 179 | `tabindex` |
-| 180 | `role` |
-| 195 | `request-rows` |
-| 202 | `exports-heading` |
-| 205 | `downloads` |
-| 207 | `evidence-id` |
-| 209 | `help` |
-| 211 | `help-heading` |
-| 247 | `href` |
-| 248 | `target` |
-| 249 | `rel` |
-| 252 | `href` |
-| 253 | `target` |
-| 254 | `rel` |
-| 255 | `an` |
+| 113 | `outage-heading` |
+| 119 | `outage-comparisons` |
+| 121 | `metrics` |
+| 126 | `timeline-heading` |
+| 129 | `exact-view` |
+| 130 | `greedy-view` |
+| 134 | `plan-caption` |
+| 136 | `craft-filter` |
+| 144 | `timeline` |
+| 161 | `inspector-heading` |
+| 164 | `candidate` |
+| 165 | `inspection` |
+| 171 | `budget-heading` |
+| 175 | `budgets` |
+| 182 | `requests-heading` |
+| 184 | `coverage` |
+| 187 | `class` |
+| 188 | `tabindex` |
+| 189 | `role` |
+| 204 | `request-rows` |
+| 211 | `exports-heading` |
+| 214 | `downloads` |
+| 216 | `evidence-id` |
+| 218 | `help` |
+| 220 | `help-heading` |
+| 256 | `href` |
+| 257 | `target` |
+| 258 | `rel` |
+| 261 | `href` |
+| 262 | `target` |
+| 263 | `rel` |
+| 264 | `an` |
 
 ## web/main.ts
 
@@ -990,26 +1068,34 @@ Line numbers refer to formatted source, not this generated document.
 | 94 | `plan` |
 | 100 | `render` |
 | 101 | `exact` |
-| 104 | `selected` |
-| 105 | `previous` |
-| 147 | `solveAllocation` |
-| 148 | `pending` |
-| 149 | `pending` |
-| 150 | `token` |
-| 154 | `button` |
-| 157 | `response` |
-| 158 | `signal` |
-| 159 | `credentials` |
-| 162 | `run` |
-| 164 | `current` |
-| 165 | `baseline` |
-| 173 | `current` |
-| 183 | `solveAllocation` |
-| 188 | `pending` |
-| 193 | `solveAllocation` |
-| 198 | `baseline` |
-| 202 | `baseline` |
-| 206 | `solveAllocation` |
+| 103 | `comparison` |
+| 104 | `section` |
+| 105 | `summary` |
+| 107 | `explanation` |
+| 109 | `list` |
+| 110 | `change` |
+| 111 | `item` |
+| 115 | `blocked` |
+| 122 | `selected` |
+| 123 | `previous` |
+| 165 | `solveAllocation` |
+| 166 | `pending` |
+| 167 | `pending` |
+| 168 | `token` |
+| 172 | `button` |
+| 175 | `response` |
+| 176 | `signal` |
+| 177 | `credentials` |
+| 180 | `run` |
+| 182 | `current` |
+| 183 | `baseline` |
+| 191 | `current` |
+| 201 | `solveAllocation` |
+| 206 | `pending` |
+| 211 | `solveAllocation` |
+| 216 | `baseline` |
+| 220 | `baseline` |
+| 224 | `solveAllocation` |
 
 ## web/style.css
 
