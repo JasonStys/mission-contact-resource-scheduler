@@ -1,0 +1,9 @@
+# Station-loss workflow validation — 2026-11-09
+
+On Windows / Python 3.14.6 / Node24, 556 Python tests passed with 99.34% combined statement/branch coverage. The new replanning module has 100% coverage. Exact station-loss plans are compared with a separately implemented exhaustive subset oracle across realistic nominal, maintenance, greedy-trap and unreachable cases, all objective tie breakers and multiple guard/policy settings. Empty option lists and six pre-existing blackouts on another station preserve the strict input cap and original constraints.
+
+Twelve TypeScript unit tests, the strict production build, Ruff lint/format, mypy, generated source index and all 27 Chromium/Firefox/WebKit production-service browser tests passed. Browser journeys review a failed station's removed contacts and unscheduled requests, confirm the original timeline remains the original case, exercise an entirely unavailable network, downloads, failed requests, accessibility and restrictive security headers. Locked dependency audits report no known Python vulnerabilities and zero npm vulnerabilities.
+
+Before refreshing evidence hashes, all 16 original exact/greedy plan summaries, solver counts and utility deltas were compared with the prior committed golden report and remained unchanged. The added contingency evidence changes the content identifiers; refreshed deterministic benchmark contracts pass.
+
+All simulations are bounded fictional candidate allocations. The feature reoptimizes the existing objective and does not promise locked contacts or minimum schedule changes. No contacts are dispatched, no real ground network is connected, and no operational assurance is claimed. The parent will review/publish and run remote Actions/cross-platform portable builds; this child triggered no remote workflows.
