@@ -22,7 +22,7 @@ The **single-station loss contingency** workflow now reoptimizes each full-windo
 
 ## Try it
 
-The [v1.0.0 release](https://github.com/JasonStys/mission-contact-resource-scheduler/releases/tag/v1.0.0) supplies ZIP bundles and separate SHA-256 files for Windows x64, Linux x64 and macOS ARM64. Extract the **whole ZIP**, then launch `MissionContactScheduler` (`.exe` on Windows). It starts a local service and opens your default browser. Keep its console open; Ctrl-C stops it. No installation, admin access, global Python or Node is needed for the bundled app.
+The [v1.1.0 release](https://github.com/JasonStys/mission-contact-resource-scheduler/releases/tag/v1.1.0) supplies Windows x64 ZIP and Linux x64/macOS ARM64 `.tar.gz` archives, each with a matching `.sha256` file. Verify the digest and extract the **whole archive**, preserving its `_internal` folder, licenses and POSIX links/permissions. Launch `MissionContactScheduler` (`.exe` on Windows). It starts a local service and opens your default browser. Keep its console open; Ctrl-C stops it. No installation, admin access, global Python or Node is needed for the bundled app.
 
 Bundles are **unsigned**. Verify the checksum and trusted source; do not disable or bypass OS security warnings. Platform/architecture support is specific, not a promise to run on every device. See [user guide](docs/USER_GUIDE.md) and [release procedure](docs/RELEASE.md).
 
@@ -86,6 +86,12 @@ Read [MODEL](docs/MODEL.md) for equations, assumptions, complexity and limitatio
 
 Designed and engineered by [Jason Stys](https://github.com/JasonStys). Portfolio: [jasonstys.github.io/portfolio-case-study-site](https://jasonstys.github.io/portfolio-case-study-site/). Questions and reproducible non-sensitive issues: [repository issues](https://github.com/JasonStys/mission-contact-resource-scheduler/issues). MIT licensed. Research references inform the concepts only; the optimizer and synthetic cases are original.
 
-## Current portable release preparation
+## Current portable release
 
 Version 1.1.0 includes the current practical workflow in Windows ZIP and Linux/macOS tar.gz portable folders, with OS/CPU/version labels and source-bound release metadata. Historical 1.0.0 downloads predate these improvements. These are unsigned portable applications, not installers; preserve the entire extracted folder and POSIX links. See [release notes](docs/releases/v1.1.0.md), [local validation](docs/reports/PORTABLE_REFRESH_20261109.md) and [release procedure](docs/RELEASE.md) for exact acceptance and publication boundaries.
+
+## Documentation editions
+
+Start with the [organized handbook](docs/handbook.md) for current usage, design, security and test guidance. Reviewed downloadable editions: [project-guide.docx](docs/reports/project-guide.docx) · [validation-review.docx](docs/reports/validation-review.docx) · [validation-evidence.xlsx](docs/reports/validation-evidence.xlsx).
+
+[Publication identities and source scope](docs/reports/publications.json) · [Documentation validation record](docs/reports/documentation-refresh-2026-11-09.md). Historical results retain their own tested revision and date.
