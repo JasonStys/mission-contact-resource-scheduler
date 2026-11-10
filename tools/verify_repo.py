@@ -29,7 +29,7 @@ SKIP = {
     "test-results",
     "playwright-report",
 }
-SOURCE_SUFFIXES = {".py", ".ts", ".css", ".html", ".sql", ".cpp", ".hpp"}
+SOURCE_SUFFIXES = {".mjs", ".py", ".ts", ".css", ".html", ".sql", ".cpp", ".hpp"}
 FILE_PURPOSES = {
     "examples/nominal.json": "Editable strict JSON case with invented requests, candidate contacts and resource budgets.",
     "docs/reports/benchmark.json": "Reviewed synthetic scheduler benchmark summaries and deterministic evidence hashes.",

@@ -1,7 +1,7 @@
 # Jason Stys: stdlib runtime, bounded synthetic models and strict verification policy.
 [project]
 name = "mission-contact-resource-scheduler"
-version = "1.0.0"
+version = "1.1.0"
 description = "Exact bounded contact scheduling, resource constraints and synthetic planning evidence by Jason Stys"
 requires-python = ">=3.12,<3.15"
 dependencies = []
@@ -24,3 +24,9 @@ show_missing = true
 strict = true
 python_version = "3.12"
 files = ["scheduler"]
+
+[tool.portable]
+package = "scheduler"
+executable = "MissionContactScheduler"
+title = "Mission Contact Resource Scheduler"
+workflows = ["validate.yml", "codeql.yml"]

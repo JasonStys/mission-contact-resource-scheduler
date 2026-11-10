@@ -85,3 +85,7 @@ Read [MODEL](docs/MODEL.md) for equations, assumptions, complexity and limitatio
 ## Author and contact
 
 Designed and engineered by [Jason Stys](https://github.com/JasonStys). Portfolio: [jasonstys.github.io/portfolio-case-study-site](https://jasonstys.github.io/portfolio-case-study-site/). Questions and reproducible non-sensitive issues: [repository issues](https://github.com/JasonStys/mission-contact-resource-scheduler/issues). MIT licensed. Research references inform the concepts only; the optimizer and synthetic cases are original.
+
+## Current portable release preparation
+
+Version 1.1.0 includes the current practical workflow in Windows ZIP and Linux/macOS tar.gz portable folders, with OS/CPU/version labels and source-bound release metadata. Historical 1.0.0 downloads predate these improvements. These are unsigned portable applications, not installers; preserve the entire extracted folder and POSIX links. See [release notes](docs/releases/v1.1.0.md), [local validation](docs/reports/PORTABLE_REFRESH_20261109.md) and [release procedure](docs/RELEASE.md) for exact acceptance and publication boundaries.
