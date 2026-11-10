@@ -16,12 +16,14 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/ARCHITECTURE.md` — # Architecture decisions
 - `docs/CONTINGENCY.md` — # Compare station-loss plans
 - `docs/MODEL.md` — # Model, objective and limits
-- `docs/RELEASE.md` — # Release and rollback procedure
+- `docs/RELEASE.md` — # Release, operation and rollback
 - `docs/THIRD_PARTY.md` — # Dependencies, notices and research
 - `docs/USER_GUIDE.md` — # User guide
 - `docs/VALIDATION.md` — # Validation evidence and strategy
 - `docs/images/overview.jpg` — Binary screenshot asset from local application validation
 - `docs/images/workspace.jpg` — Binary screenshot asset from local application validation
+- `docs/releases/v1.1.0.md` — # Version 1.1.0 — Mission Contact Resource Scheduler
+- `docs/reports/PORTABLE_REFRESH_20261109.md` — # Portable release refresh validation — 2026-11-09
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Station-loss workflow validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed synthetic scheduler benchmark summaries and deterministic evidence hashes.
 - `docs/reports/ci-baseline.md` — # CI and release verification record
@@ -40,6 +42,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `scheduler/__main__.py` — """Local website launcher and reproducible export CLI by Jason Stys.
 - `scheduler/engine.py` — """Reviewed synthetic scenarios and canonical experiment evidence by Jason Stys.
 - `scheduler/model.py` — """Strict finite planning inputs by Jason Stys.
+- `scheduler/package_info.py` — """Read bounded frozen-build identity by Jason Stys, never a user-profile configuration.
 - `scheduler/replanning.py` — """Station-loss contingency comparisons by Jason Stys.
 - `scheduler/reports.py` — """Deterministic inert exports and explicit local SQL history by Jason Stys.
 - `scheduler/resources/history.sql` — -- Immutable local experiment history by Jason Stys. Tables/triggers: docs/CODE_INDEX.md.
@@ -47,14 +50,22 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `scheduler/solver.py` — """Deterministic greedy and exact branch-and-bound planning by Jason Stys.
 - `tests/test_io.py` — """CLI, report, SQLite and actual loopback HTTP integration tests by Jason Stys.
 - `tests/test_model.py` — """Strict input, canonical provenance and finite control tests by Jason Stys.
+- `tests/test_package_info.py` — """Frozen/source identity and owned-instance guards by Jason Stys.
+- `tests/test_portable_archive.py` — """Real bounded archive/extraction fixtures by Jason Stys; no archive member is executed.
+- `tests/test_release_contract.py` — """Independent release/source/archive authorization cases by Jason Stys.
 - `tests/test_replanning.py` — """Independent contingency oracles by Jason Stys.
 - `tests/test_solver.py` — """Independent exhaustive oracle, grid and constraint tests by Jason Stys.
 - `tests/ui.spec.ts` — /** Production-handler, three-engine browser acceptance tests by Jason Stys.
 - `tools/benchmark.py` — """Portable deterministic scheduler contracts and descriptive timing by Jason Stys.
-- `tools/package_app.py` — """Build portable native bundles from reviewed source by Jason Stys.
-- `tools/prepare_release.py` — """Fail-closed draft release preparation by Jason Stys.
-- `tools/smoke_app.py` — """Actual frozen-executable export and loopback smoke test by Jason Stys.
-- `tools/upload_release.py` — """Upload only a freshly smoke-tested native bundle to its draft by Jason Stys.
+- `tools/legacy_smoke.py` — """Actual frozen-executable export and loopback smoke test by Jason Stys.
+- `tools/native_browser.mjs` — /**
+- `tools/native_feature_smoke.mjs` — /** Jason Stys — actual extracted contact scheduler, station-loss comparison and JSON export.
+- `tools/package_app.py` — """Build and verify versioned portable applications by Jason Stys.
+- `tools/portable_archive.py` — """Bounded portable archive creation and fresh extraction by Jason Stys.
+- `tools/prepare_release.py` — """Prepare only a new version/source-bound draft by Jason Stys.
+- `tools/release_contract.py` — """Version, source and immutable draft-release contracts by Jason Stys.
+- `tools/smoke_app.py` — """Actual extracted-executable CLI, HTTP and Chromium acceptance by Jason Stys.
+- `tools/upload_release.py` — """Upload one inspected source/version archive pair by Jason Stys.
 - `tools/verify_repo.py` — """Generate/check exact-line code and file inventories by Jason Stys.
 - `tsconfig.json` — Strict TypeScript contracts for browser, unit and end-user test code.
 - `vitest.config.ts` — /** Pure display-logic tests by Jason Stys; configuration inventory: docs/CODE_INDEX.md. */

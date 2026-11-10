@@ -11,6 +11,7 @@ from dataclasses import asdict, dataclass, replace
 from pathlib import Path
 from typing import Any
 
+from scheduler import __version__
 from scheduler.model import (
     SPACECRAFT,
     STATIONS,
@@ -161,7 +162,7 @@ def evaluate(case: Case, settings: Settings, source: str) -> dict[str, Any]:
         else asdict(settings)
     )
     result: dict[str, Any] = {
-        "version": "1.0.0",
+        "version": __version__,
         "scenario": source,
         "settings": configuration,
         "case": case_data(case),
