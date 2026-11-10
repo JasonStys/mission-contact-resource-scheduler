@@ -48,6 +48,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `scheduler/resources/history.sql` — -- Immutable local experiment history by Jason Stys. Tables/triggers: docs/CODE_INDEX.md.
 - `scheduler/server.py` — """Loopback-only, read-only HTTP application by Jason Stys; not an Internet server.
 - `scheduler/solver.py` — """Deterministic greedy and exact branch-and-bound planning by Jason Stys.
+- `tests/test_draft_lookup.py` — """Independent real-shape draft API contract fixtures by Jason Stys.
 - `tests/test_io.py` — """CLI, report, SQLite and actual loopback HTTP integration tests by Jason Stys.
 - `tests/test_model.py` — """Strict input, canonical provenance and finite control tests by Jason Stys.
 - `tests/test_package_info.py` — """Frozen/source identity and owned-instance guards by Jason Stys.
@@ -57,6 +58,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/test_solver.py` — """Independent exhaustive oracle, grid and constraint tests by Jason Stys.
 - `tests/ui.spec.ts` — /** Production-handler, three-engine browser acceptance tests by Jason Stys.
 - `tools/benchmark.py` — """Portable deterministic scheduler contracts and descriptive timing by Jason Stys.
+- `tools/draft_lookup.py` — """Bounded authenticated draft lookup by Jason Stys.
 - `tools/legacy_smoke.py` — """Actual frozen-executable export and loopback smoke test by Jason Stys.
 - `tools/native_browser.mjs` — /**
 - `tools/native_feature_smoke.mjs` — /** Jason Stys — actual extracted contact scheduler, station-loss comparison and JSON export.
