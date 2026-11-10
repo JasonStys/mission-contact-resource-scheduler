@@ -749,6 +749,36 @@ Line numbers refer to formatted source, not this generated document.
 | 120 | `variable path` |
 | 121 | `variable output` |
 
+## tests/test_publication_text.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 15 | `definition edition` |
+| 15 | `parameter main` |
+| 15 | `parameter name` |
+| 15 | `parameter root` |
+| 15 | `parameter text` |
+| 17 | `variable path` |
+| 19 | `variable package` |
+| 34 | `definition test_named_office_xml_remains_visible` |
+| 34 | `parameter main` |
+| 34 | `parameter name` |
+| 34 | `parameter tmp_path` |
+| 36 | `variable text` |
+| 40 | `definition test_unknown_binary_is_not_an_exclusion` |
+| 40 | `parameter tmp_path` |
+| 42 | `variable path` |
+| 47 | `definition test_missing_document_root_is_rejected` |
+| 47 | `parameter tmp_path` |
+| 53 | `definition test_invalid_zip_is_rejected` |
+| 53 | `parameter tmp_path` |
+| 55 | `variable path` |
+| 62 | `definition test_invalid_utf8_xml_is_rejected` |
+| 62 | `parameter tmp_path` |
+| 68 | `definition test_expansion_budget_is_active` |
+| 68 | `parameter tmp_path` |
+| 70 | `variable path` |
+
 ## tests/test_release_contract.py
 
 | Line | Definition / variable / structural identifier |
@@ -1269,6 +1299,30 @@ Line numbers refer to formatted source, not this generated document.
 | --- | --- |
 | 13 | `definition main` |
 
+## tools/publication_text.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 11 | `variable EDITION_ROOTS` |
+| 16 | `variable MAX_PACKAGE_BYTES` |
+| 17 | `variable MAX_EXPANDED_BYTES` |
+| 18 | `variable MAX_MEMBER_BYTES` |
+| 19 | `variable MAX_MEMBERS` |
+| 22 | `definition public_text` |
+| 22 | `parameter path` |
+| 22 | `parameter root` |
+| 24 | `variable relative` |
+| 28 | `variable source` |
+| 31 | `variable package` |
+| 32 | `variable members` |
+| 33 | `variable member` |
+| 33 | `variable names` |
+| 38 | `variable member` |
+| 40 | `variable result` |
+| 41 | `variable member` |
+| 50 | `variable stream` |
+| 51 | `variable payload` |
+
 ## tools/release_contract.py
 
 | Line | Definition / variable / structural identifier |
@@ -1384,46 +1438,46 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 13 | `variable ROOT` |
-| 14 | `variable SKIP` |
-| 32 | `variable SOURCE_SUFFIXES` |
-| 33 | `variable FILE_PURPOSES` |
-| 51 | `definition listed_paths` |
-| 53 | `variable result` |
-| 70 | `variable name` |
-| 73 | `definition source_files` |
-| 75 | `variable result` |
-| 76 | `variable name` |
-| 77 | `variable relative` |
-| 78 | `variable part` |
-| 86 | `variable path` |
-| 92 | `parameter path` |
-| 95 | `definition inventory` |
-| 97 | `variable code` |
-| 106 | `variable catalog` |
-| 112 | `variable path` |
-| 113 | `variable relative` |
-| 116 | `variable content` |
-| 121 | `variable summary` |
-| 122 | `variable summary` |
-| 130 | `variable entries` |
-| 132 | `variable tree` |
-| 133 | `variable node` |
-| 143 | `variable line` |
-| 143 | `variable number` |
-| 144 | `variable patterns` |
-| 155 | `variable pattern` |
-| 156 | `variable name` |
-| 158 | `variable names` |
-| 159 | `variable name` |
-| 171 | `variable line` |
-| 171 | `variable name` |
-| 183 | `definition main` |
-| 185 | `variable parser` |
-| 187 | `variable args` |
-| 188 | `variable content` |
-| 188 | `variable name` |
-| 189 | `variable path` |
+| 18 | `variable ROOT` |
+| 19 | `variable SKIP` |
+| 37 | `variable SOURCE_SUFFIXES` |
+| 38 | `variable FILE_PURPOSES` |
+| 60 | `definition listed_paths` |
+| 62 | `variable result` |
+| 79 | `variable name` |
+| 82 | `definition source_files` |
+| 84 | `variable result` |
+| 85 | `variable name` |
+| 86 | `variable relative` |
+| 87 | `variable part` |
+| 95 | `variable path` |
+| 101 | `parameter path` |
+| 104 | `definition inventory` |
+| 106 | `variable code` |
+| 115 | `variable catalog` |
+| 121 | `variable path` |
+| 122 | `variable relative` |
+| 125 | `variable content` |
+| 130 | `variable summary` |
+| 131 | `variable summary` |
+| 139 | `variable entries` |
+| 141 | `variable tree` |
+| 142 | `variable node` |
+| 152 | `variable line` |
+| 152 | `variable number` |
+| 153 | `variable patterns` |
+| 164 | `variable pattern` |
+| 165 | `variable name` |
+| 167 | `variable names` |
+| 168 | `variable name` |
+| 180 | `variable line` |
+| 180 | `variable name` |
+| 192 | `definition main` |
+| 194 | `variable parser` |
+| 196 | `variable args` |
+| 197 | `variable content` |
+| 197 | `variable name` |
+| 198 | `variable path` |
 
 ## vitest.config.ts
 

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "project": "mission-contact-resource-scheduler",
+  "author": "Jason Stys",
+  "editionDate": "2026-11-09",
+  "sourceBaseline": "4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+  "sourceUrl": "https://github.com/JasonStys/mission-contact-resource-scheduler/tree/4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+  "functionalEvidenceBaseline": "4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+  "evidenceObservedAt": "2026-11-10T05:25:40.628667+00:00",
+  "workflowEvidence": [
+    {
+      "conclusion": "success",
+      "databaseId": 42752427629,
+      "event": "push",
+      "headSha": "4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+      "name": "CodeQL",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/mission-contact-resource-scheduler/actions/runs/42752427629"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42752427785,
+      "event": "push",
+      "headSha": "4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+      "name": "Validation",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/mission-contact-resource-scheduler/actions/runs/42752427785"
+    }
+  ],
+  "summary": "The released 1.1.0 portable scheduler includes station-loss contingency comparisons: inspect retained, removed and replacement contacts, per-request service changes and utility loss, then download complete planning evidence.",
+  "rationale": "The existing exact finite-candidate solver and independent exhaustive oracle are preserved. The extracted application proves the hand-checkable 60 + 60 versus 100 greedy trap, a fully lost station and feasible empty service before comparing the actual UI download with its API result. Source-bound native packaging carries the practical replanning workflow into downloads.",
+  "limitations": [
+    "Invented finite candidates and units; no real radio, ground-station dispatch or operational availability guarantee.",
+    "Replanning optimizes the existing objective; it does not guarantee minimum changes to a previous plan.",
+    "Unsigned desktop portable folders, not system installers or clean-machine proof. Three-OS extracted-native checks drive an owned URL; default OS browser opening remains manual."
+  ],
+  "documents": [
+    {
+      "filename": "project-guide.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 75458,
+      "sha256": "c15c49dfbd42904296ce1d8db7ec231c71d1e941fc7028f23fd4a24085530610",
+      "sourceBaseline": "4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 4,
+        "renderedPageSha256": {
+          "page-1.png": "eb8776880730f2e81ace54f4ed8e513dc53f3aaa2e5eb0be8430411766443596",
+          "page-2.png": "5a222895db5419d958a7a70c9e9c90a8da9aa005df4682f869bac6bf35fdbd24",
+          "page-3.png": "1d6e4580e9a7cefe7b8e984c2168d3f118834db69ce50c57577641d3bc8ed96f",
+          "page-4.png": "e6e413218e75c9f07dc0917b9d64c12b2d03a73f34a7850a40abaa42dac8e77a"
+        }
+      }
+    },
+    {
+      "filename": "validation-review.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 41883,
+      "sha256": "24d72d6f5a06d5d64167e820d7b188ad1db1b0fecced179158ffcdd540d7d377",
+      "sourceBaseline": "4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 3,
+        "renderedPageSha256": {
+          "page-1.png": "9d79366207a9772f218bc4980c041c6c197a58614c24955bdd27476f15bc8e77",
+          "page-2.png": "38f36165207d85513eeaca0c23072d3e1ca8f7a2d579b1a333ef02119c21cec6",
+          "page-3.png": "bbe951d7d5156b5cc20799800b64fef28ecdedda7c64653c3d722b19a9a49a81"
+        }
+      }
+    },
+    {
+      "filename": "validation-evidence.xlsx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "bytes": 7380,
+      "sha256": "e5cd3929e049074c361261063425dd34523020dd83d25d9f55a8b66fd9c0ba6a",
+      "sourceBaseline": "4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+      "visualReview": {
+        "approved": true,
+        "tabsReviewed": ["Test sources", "Workflow evidence"],
+        "previewSha256": {
+          "Workflow evidence": "28e510308eb8e482f068bb34cc995dc510da065850a20418a955c2b6814c5e94",
+          "Test sources": "b4133a279dfe703c74c6cace1c7f08410e15d0e23de8dcfe7d41d47653131113"
+        },
+        "tables": [
+          {
+            "path": "xl/tables/table1.xml",
+            "name": "WorkflowEvidence",
+            "range": "A7:D9",
+            "columns": 4,
+            "autoFilter": true,
+            "filterButtonsEnabled": true
+          },
+          {
+            "path": "xl/tables/table2.xml",
+            "name": "TestSources",
+            "range": "A7:C17",
+            "columns": 3,
+            "autoFilter": true,
+            "filterButtonsEnabled": true
+          }
+        ],
+        "formulaCount": 4,
+        "failureSensitivityReceiptPassed": true,
+        "formulaErrors": []
+      }
+    }
+  ],
+  "scope": "Reviewed documentation editions of the cited source. Checksums identify bytes, not authorship. Historical measurements retain their own dates; integration CI must be checked separately."
+}

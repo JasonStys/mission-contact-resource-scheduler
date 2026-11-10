@@ -20,6 +20,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/THIRD_PARTY.md` — # Dependencies, notices and research
 - `docs/USER_GUIDE.md` — # User guide
 - `docs/VALIDATION.md` — # Validation evidence and strategy
+- `docs/handbook.md` — # Mission Contact Resource Scheduler handbook
 - `docs/images/overview.jpg` — Binary screenshot asset from local application validation
 - `docs/images/workspace.jpg` — Binary screenshot asset from local application validation
 - `docs/releases/v1.1.0.md` — # Version 1.1.0 — Mission Contact Resource Scheduler
@@ -27,6 +28,11 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Station-loss workflow validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed synthetic scheduler benchmark summaries and deterministic evidence hashes.
 - `docs/reports/ci-baseline.md` — # CI and release verification record
+- `docs/reports/documentation-refresh-2026-11-09.md` — # Documentation refresh — 2026-11-09
+- `docs/reports/project-guide.docx` — Reviewed Word project guide bound to the documented source revision.
+- `docs/reports/publications.json` — Exact Office publication identities, approved page/tab scopes and immutable source baselines.
+- `docs/reports/validation-evidence.xlsx` — Reviewed Excel workflow and test-source Tables with recalculated outcome formulas.
+- `docs/reports/validation-review.docx` — Reviewed Word validation evidence and explicit test/analysis limitations.
 - `examples/nominal.json` — Editable strict JSON case with invented requests, candidate contacts and resource budgets.
 - `launcher.py` — """Portable application entry point by Jason Stys; main and argv: docs/CODE_INDEX.md.
 - `licenses/PYTHON.txt` — A. HISTORY OF THE SOFTWARE
@@ -53,6 +59,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/test_model.py` — """Strict input, canonical provenance and finite control tests by Jason Stys.
 - `tests/test_package_info.py` — """Frozen/source identity and owned-instance guards by Jason Stys.
 - `tests/test_portable_archive.py` — """Real bounded archive/extraction fixtures by Jason Stys; no archive member is executed.
+- `tests/test_publication_text.py` — """Jason Stys: actual Office ZIP fixtures retain text scanning and reject unknown content.
 - `tests/test_release_contract.py` — """Independent release/source/archive authorization cases by Jason Stys.
 - `tests/test_replanning.py` — """Independent contingency oracles by Jason Stys.
 - `tests/test_solver.py` — """Independent exhaustive oracle, grid and constraint tests by Jason Stys.
@@ -65,6 +72,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tools/package_app.py` — """Build and verify versioned portable applications by Jason Stys.
 - `tools/portable_archive.py` — """Bounded portable archive creation and fresh extraction by Jason Stys.
 - `tools/prepare_release.py` — """Prepare only a new version/source-bound draft by Jason Stys.
+- `tools/publication_text.py` — """Jason Stys: inspect only named reviewed Office editions without hiding their XML.
 - `tools/release_contract.py` — """Version, source and immutable draft-release contracts by Jason Stys.
 - `tools/smoke_app.py` — """Actual extracted-executable CLI, HTTP and Chromium acceptance by Jason Stys.
 - `tools/upload_release.py` — """Upload one inspected source/version archive pair by Jason Stys.
