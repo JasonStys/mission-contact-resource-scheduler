@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "repository": "mission-contact-resource-scheduler",
+  "runtimeVersion": "1.1.0",
+  "runtimeSource": "4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3",
+  "createdAt": "2026-11-10T23:51:53.146Z",
+  "author": "Jason Stys",
+  "document": "windows-application-guide.docx",
+  "sha256": "facddb936e8dea6437a1e43ce4ab01d5fee895a62e4d6d4383ba964d5368ed74",
+  "screenshots": [
+    {
+      "file": "01-station-loss.png",
+      "sha256": "5879fb3d7e2eec4404b9d4f163534ad9b85afb9eeccabf0495a1aaf24a9ecdb5",
+      "width": 1220,
+      "height": 389,
+      "caption": "Actual installed application showing greedy trap and station loss. Captured during the accepted native user journey with prepared synthetic inputs."
+    },
+    {
+      "file": "02-unreachable-window.png",
+      "sha256": "55f2e6139f8fa7cd2ee8d9043e2db51d341449f442c9a0701d6c23c5664bf8c8",
+      "width": 1220,
+      "height": 220,
+      "caption": "Actual installed application showing unreachable contact window. Captured during the accepted native user journey with prepared synthetic inputs."
+    }
+  ],
+  "snippets": [
+    {
+      "file": "scheduler/replanning.py",
+      "first": 25,
+      "last": 44,
+      "sha256": "01b12bb2982c41e2d2b31ab087d657b4615a52219c01d7e583088192a55feec2",
+      "url": "https://github.com/JasonStys/mission-contact-resource-scheduler/blob/4e5c7ecf87d8ac372a3a45cafc9b539a4fc660f3/scheduler/replanning.py#L25"
+    }
+  ],
+  "observedTests": [
+    {
+      "name": "Published package",
+      "observed": "Exact public release, provider/sidecar hashes and installed resources verified; installed bytes unchanged.",
+      "result": "Passed"
+    },
+    {
+      "name": "Actual native core",
+      "observed": "The existing packaged CLI/API and native feature acceptance helper passed on the installed executable.",
+      "result": "Passed"
+    },
+    {
+      "name": "Scenario evidence",
+      "observed": "The exact B1+C1 solution scored 120 against greedy 100; losing station Alpha removed both contacts. An unreachable contact window scored zero.",
+      "result": "Passed"
+    },
+    {
+      "name": "UI and cleanup",
+      "observed": "Actual compiled-application browser journey passed. Both images were individually inspected; cleanup left no owned child process.",
+      "result": "Passed"
+    }
+  ],
+  "visualReview": {
+    "approved": true,
+    "pageCount": 4,
+    "reviewedAt": "2026-11-11T01:38:56.236986+00:00",
+    "reviewers": [
+      "audit_apps"
+    ],
+    "method": "Every page individually viewed at original resolution; unchanged previously reviewed pages retained only after exact SHA-256 match.",
+    "pageSHA256": {
+      "1": "6049f77eab934ae5a423ceb3ecd4b4d148f331a71e10737fdffdbd1ab90ae09b",
+      "2": "379ce98fa3c0d31a98a1add3a0c4317681c6eb4245a28582b18be7c8939ce72d",
+      "3": "f33a3d12875919beb1773e5155003850e42823d36d3733e4ce50719450ec2fc9",
+      "4": "bcded5556a6c90a0008dad3b4d955cde280988ddafd100636eb08b96040edcbb"
+    },
+    "ooxmlSchema": "passed",
+    "issues": []
+  }
+}
